@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: registry.home-k8s.lab/k8s/shazzam/backjs # le nom de l'image Docker
+        ports:
+        - containerPort: 5000
+        command: ["node", "server.js"]
