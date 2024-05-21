@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: registry.home-k8s.lab/k8s/shazzam/backjs1 # le nom de l'image Docker
+        image: registry.home-k8s.lab/k8s/shazzam/backjs2 # le nom de l'image Docker
         ports:
         - containerPort: 5000
         command: ["node", "server.js"]
